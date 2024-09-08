@@ -1,0 +1,27 @@
+# basic isntructions
+
+Connection to virtal box
+<https://www.oracle.com/technical-resources/articles/it-infrastructure/admin-manage-vbox-cli.html
+
+1.  start by listing existing virtual box
+
+VBoxManage list vms
+
+
+2.  on arch_system
+ A) set root passwd with "passwd"
+ B) Confirm that PermitRootLogin yes is set in /etc/ssh/sshd_config. If it is not, set it and reload the OpenSSH daemon sshd.service to apply the changes.
+ C) run systemctl start sshd.service
+
+https://wiki.archlinux.org/title/Install_Arch_Linux_via_SSH
+
+
+
+3.  set up ssh connection
+https://dev.to/developertharun/easy-way-to-ssh-into-virtualbox-machine-any-os-just-x-steps-5d9i
+
+setup port 3022 for ssh connection in VMBox Settings
+
+ssh -p 3022 root@127.0.0.1
+
+4.  forward ssh to llm
